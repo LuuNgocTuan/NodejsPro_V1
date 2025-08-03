@@ -1,0 +1,43 @@
+{
+    "name": "nodejs-pro-v1",
+    "version": "1.0.0",
+    "description": "This is the **final project** for the **NodeJS Pro - Tự Học từ số 0 (MVC, REST APIs, SQL/MongoDB)** course by **Lưu Ngọc Tuấn**.",
+    "type": "module",
+    "main": "dist/app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon",
+        "dev": "nodemon"
+    },
+    "nodemonConfig": {
+        "watch": [
+            "src"
+        ],
+        "ext": "ts",
+        "ignore": [
+            "node_modules"
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/LuuNgocTuan/NodejsPro_V1.git"
+    },
+    "author": "Lưu Ngọc Tuấn",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/LuuNgocTuan/NodejsPro_V1/issues"
+    },
+    "homepage": "https://github.com/LuuNgocTuan/NodejsPro_V1#readme",
+    "dependencies": {
+        "dotenv": "17.2.1",
+        "express": "5.1.0"
+    },
+    "devDependencies": {
+        "@types/express": "5.0.3",
+        "@types/node": "24.1.0",
+        "nodemon": "3.1.10",
+        "ts-node": "10.9.2",
+        "tsconfig-paths": "4.2.0",
+        "typescript": "5.9.2"
+    }
+}
