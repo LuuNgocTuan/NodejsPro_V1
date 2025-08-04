@@ -13,9 +13,9 @@ This source code is provided **exclusively for enrolled students** in this cours
 
 💡 **Violators may face:**
 
--   DMCA takedown requests.
--   Account suspension on learning platforms.
--   Legal action in serious cases.
+- DMCA takedown requests.
+- Account suspension on learning platforms.
+- Legal action in serious cases.
 
 📩 For inquiries, contact: **admin@ngoctuan.vn**
 
