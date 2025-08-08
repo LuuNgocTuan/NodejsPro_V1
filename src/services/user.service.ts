@@ -4,7 +4,7 @@ const getAllUser = async () => {
   const connection = await getConnection();
   try {
     const [results, fields] = await connection.query("SELECT * FROM `users`");
-    console.log(results); 
+    // console.log(results); 
     return results; // Lấy tất cả người dùng từ cơ sở dữ liệu
   } catch (err) {
     console.log(err);
