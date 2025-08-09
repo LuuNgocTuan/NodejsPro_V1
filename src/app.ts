@@ -2,7 +2,7 @@ import express from "express";
 
 import "dotenv/config";
 
-import webRoutes from "./routes/web";
+import webRoutes from "routes/web";
 import { get } from "http";
 import getConnection from "./config/database";
 

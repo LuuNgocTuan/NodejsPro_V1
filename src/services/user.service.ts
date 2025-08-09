@@ -1,4 +1,4 @@
-import getConnection from "../config/database";
+import getConnection from "config/database";
 
 const getAllUser = async () => {
   const connection = await getConnection();
