@@ -50,9 +50,14 @@
               <td><%= user.email %></td>
               <td><%= user.address %></td>
               <td>
-                <div>
-                  <button class="btn btn-warning">Edit</button>
-                  <button class="btn btn-danger">Delete</button>
+                <div style="display: flex; gap: 10px">
+                  <form action="/view-user/<%= user.id %>">
+                    <button type="submit" class="btn btn-warning">Edit</button>
+                  </form>
+
+                  <form action="/delete-user/<%= user.id %>" method="post">
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                  </form>
                 </div>
               </td>
             </tr>
