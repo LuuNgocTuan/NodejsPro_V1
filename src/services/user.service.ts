@@ -1,4 +1,5 @@
 import getConnection from "config/database";
+import { RowDataPacket } from "mysql2";
 
 const getAllUser = async () => {
   const connection = await getConnection();
@@ -49,4 +50,48 @@ const handleDeleteUser = async (id: string) => {
   }
 };
 
-export { getAllUser, handleCreateUser, handleDeleteUser };
+const getUserById = async (id: string) => {
+  const connection = await getConnection();
+  try {
+    const sql = "SELECT * FROM `users` WHERE `id` = ?";
+
+    const values = [id];
+
+    const [result, fields] = await connection.execute<RowDataPacket[]>(
+      sql,
+      values
+    );
+    return result[0];
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+const updateUserById = async (
+  id: string,
+  fullName: string,
+  email: string,
+  password: string,
+  address: string
+) => {
+  const connection = await getConnection();
+  try {
+    const sql =
+      "UPDATE `users` SET `fullName` = ?, `email` = ?, `password`=?, `address` = ? WHERE `id` = ?";
+
+    const values = [fullName, email, password, address, id];
+
+    const [result, fields] = await connection.execute(sql, values);
+    return result;
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+export {
+  getAllUser,
+  handleCreateUser,
+  handleDeleteUser,
+  getUserById,
+  updateUserById,
+};
